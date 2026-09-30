@@ -1,0 +1,30 @@
+:root { color-scheme: light dark; --ink:#16181d; --mute:#6b7280; --line:#e5e7eb; --bg:#fafafa; --card:#fff; }
+@media (prefers-color-scheme: dark){ :root{ --ink:#e8eaed; --mute:#9aa1ab; --line:#2a2e35; --bg:#111317; --card:#181b20; } }
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.7 system-ui,-apple-system,"Segoe UI",sans-serif;word-break:keep-all}
+main{max-width:980px;margin:0 auto;padding:40px 16px 80px}
+h1{font-size:24px;margin:0 0 6px;letter-spacing:-.02em}
+.sub{color:var(--mute);margin:0 0 20px}
+.panel{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:16px;margin-bottom:16px;overflow-x:auto}
+.sticky{position:sticky;top:8px;z-index:10}
+.row{display:flex;gap:8px 10px;align-items:center;flex-wrap:wrap;margin-bottom:10px}
+button,.btn{font:inherit;padding:6px 12px;border:1px solid var(--line);background:var(--card);color:var(--ink);border-radius:7px;cursor:pointer;text-decoration:none}
+.btn[aria-current="page"]{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+button:disabled{opacity:.5;cursor:default}
+table{border-collapse:collapse;width:100%;font-size:14px;font-variant-numeric:tabular-nums}
+th,td{text-align:left;padding:6px 10px;border-bottom:1px solid var(--line);white-space:nowrap}
+th{font-weight:600}
+.mute,.note{color:var(--mute);font-size:13px}
+.note{margin:10px 0 0}
+.list{display:flex;flex-direction:column;align-items:center;gap:12px}
+.slot{position:relative;background:#fff;box-shadow:0 1px 3px rgba(0,0,0,.18)}
+.slot .num{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-size:40px;font-weight:700;color:#d1d5db}
+input{font:inherit;padding:6px 10px;border:1px solid var(--line);border-radius:7px;background:var(--card);color:var(--ink);min-width:260px}
+.hits{list-style:none;margin:10px 0 0;padding:0;max-height:168px;overflow:auto;border-top:1px solid var(--line)}
+.hits li.mute{padding:6px 4px}
+.hits button{display:block;width:100%;text-align:left;border:0;border-bottom:1px solid var(--line);border-radius:0;padding:6px 4px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;font-size:14px}
+.hits button.on{background:rgba(249,115,22,.14)}
+.hits b{margin-right:6px}
+.hits mark{background:rgba(250,204,21,.5);color:inherit}
+/* 조각마다 <mark> 방식의 칠하기. Range 방식(::highlight)은 app/lab.tsx에 있어요 */
+.react-pdf__Page__textContent mark{background:rgba(250,204,21,.45);color:transparent;padding:0}
