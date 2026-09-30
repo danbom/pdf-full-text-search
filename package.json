@@ -1,0 +1,23 @@
+{
+  "name": "pdf-full-text-search",
+  "private": true,
+  "version": "0.1.0",
+  "scripts": {
+    "dev": "next dev --turbopack",
+    "build": "next build --turbopack",
+    "start": "next start",
+    "versions": "node -e \"const p=n=>require(n+'/package.json').version; console.log('next',p('next'));console.log('react-pdf',p('react-pdf'));console.log('pdfjs-dist',p('pdfjs-dist'))\"",
+    "make:wrap": "node scripts/make-wrap-pdf.mjs"
+  },
+  "dependencies": {
+    "next": "^16.3.0",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "react-pdf": "^10.5.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "@types/react": "^19.0.0",
+    "typescript": "^5.6.0"
+  }
+}
