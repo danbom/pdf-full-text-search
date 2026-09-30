@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="ko">
+<meta charset="utf-8">
+<title>wrap.pdf</title>
+<!--
+  public/wrap.pdf 원본이에요. scripts/make-wrap-pdf.mjs가 Chromium으로 인쇄해서 PDF를 만듭니다.
+  줄 바꿈 위치를 고정하려고 줄마다 div로 나눴어요(white-space: pre).
+  - 영어: 줄 끝 하이픈 두 가지 — 원래 있던 하이픈(self-reported)과 단어를 자른 하이픈(Pharmacovigi-lance)
+  - 한국어: 단어 중간에서 줄이 바뀜(임상시 / 험). Chromium은 word-break 기본값에서 한국어를 글자 단위로 줄 바꿈해요
+  - 마지막 줄의 「임상시험」은 한 줄 안에 온전히 있어요
+-->
+<style>
+@page { size: 612pt 792pt; margin: 72pt }
+body { font: 13pt/1.6 "Noto Sans CJK KR", sans-serif; margin: 0 }
+h1 { font-size: 18pt; margin: 0 0 14pt }
+section { margin: 0 0 28pt }
+.l { white-space: pre }
+</style>
+<h1>Visit Procedures</h1>
+<section>
+<div class="l">Participants who experience serious adverse</div>
+<div class="l">events are followed up within 24 hours. Each self-</div>
+<div class="l">reported symptom is checked by the site. Pharmacovigi-</div>
+<div class="l">lance staff review every case before it is filed.</div>
+</section>
+<h1>방문 절차</h1>
+<section>
+<div class="l">중대한 이상반응이 생기면 24시간 안에 임상시</div>
+<div class="l">험 책임자에게 알려요. 시험대상자가 직접 보고한</div>
+<div class="l">증상은 모두 기관에서 확인하고, 약물감시 담당자가</div>
+<div class="l">임상시험 모니터링 기록에 남겨요.</div>
+</section>
