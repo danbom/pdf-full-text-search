@@ -4,6 +4,10 @@ react-pdf로 화면 근처 쪽만 그릴 때, 텍스트 레이어에 기대지 �
 블로그 글 [「'임상시험'이 두 번 있는데 한 번만 찾는다」](https://danbom425.tistory.com/entry/pdf-full-text-search)(브라우저에서 문서 다루기 #5)의 재현 저장소입니다.
 [4편 저장소](https://github.com/danbom/pdf-page-virtualization)의 「보이는 쪽만」 뷰어에 검색을 붙였어요.
 
+**▶ 라이브 데모: https://pdf-full-text-search.vercel.app**
+
+[![screenshot](docs/screenshot.png)](https://pdf-full-text-search.vercel.app)
+
 ## 결론 먼저
 
 **줄 바꿈 1쪽**(`public/wrap.pdf`)에서 찾고 칠한 곳이에요. 줄 끝에서 잘린 단어, 합자(ﬀ·ﬁ), 띄어쓰기가 다른 검색어를 넣어 뒀어요.
